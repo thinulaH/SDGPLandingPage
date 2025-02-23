@@ -59,9 +59,9 @@ const BetaSignup = () => {
   return (
     <div className="min-h-screen bg-purple-50 pt-20">
       <div className="max-w-3xl mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-center mb-4">Join the SnickerSnap Beta</h1>
+        <h1 className="text-4xl font-bold text-center mb-4">Join the ReadAroo Beta</h1>
         <p className="text-center text-gray-600 mb-12">
-          Be among the first to experience SnickerSnap and help shape the future of learning!
+          Be among the first to experience ReadAroo and help shape the future of learning!
         </p>
 
         <div className="bg-white p-8 rounded-lg shadow-lg">

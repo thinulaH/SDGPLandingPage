@@ -1,0 +1,41 @@
+html {
+    scroll-behavior: smooth;
+  }
+  /* Fade-In and Scale-Up Animation */
+@keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  .animate-fade-in-scale {
+    animation: fadeInScale 1.5s ease-in-out;
+  }
+  
+  /* Typing Animation */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes blinkCursor {
+    from {
+      border-right-color: transparent;
+    }
+    to {
+      border-right-color: #2E2E2E;
+    }
+  }
+  
+  .animate-typing {
+    animation: typing 1.5s steps(10, end), blinkCursor 0.75s step-end infinite;
+  }
