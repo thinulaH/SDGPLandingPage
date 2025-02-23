@@ -176,6 +176,9 @@ const BetaSignup = () => {
                         <a href="https://github.com/ashenalwiz/Project-Snikersnap" className="hover:text-gray-300 transition-colors">
                           <Github className="w-6 h-6" />
                         </a>
+                        <a href="https://www.linkedin.com/company/readaroo/" className="hover:text-gray-300 transition-colors">
+                          <Linkedin className="w-6 h-6" />
+                        </a>
                         <a href="https://www.instagram.com/readaroo/" className="hover:text-gray-300 transition-colors">
                           <Instagram className="w-6 h-6" />
                         </a>

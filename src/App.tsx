@@ -4,6 +4,11 @@ import Navbar from './components/Navbar';
 import Loading from './components/Loading';
 
 import BetaSignup from './pages/BetaSignup';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; // Import Swiper styles
+import 'swiper/css/effect-fade'; // Import additional effects if needed
+import 'swiper/css/navigation'; // If you're using navigation arrows
+import 'swiper/css/pagination';
 import { BookOpen, Brain, Users, Mail, Github, Linkedin, MessageSquare, Headphones, GamepadIcon, HelpCircle, Instagram } from 'lucide-react';
 
 function App() {
@@ -117,31 +122,40 @@ function App() {
           element={
             <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-purple-50">
               {/* Hero Section */}
-              <section className="pt-20 pb-32 px-4 bg-gradient-to-b from-yellow-100 to-yellow-50">
-                <div className="max-w-6xl mx-auto text-center animate-fade-in">
-                  <h1 className="text-5xl md:text-6xl mt-8 font-bold text-gray-900 mb-6 animate-slide-up">
-                    Readaroo
-                    <span className="block text-3xl md:text-4xl text-purple-600 mt-2 animate-color-pulse">
-                      A Fun Way to Learn!
-                    </span>
-                  </h1>
-                  <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-                    An engaging game that makes reading easier for kids with dyslexia!
-                  </p>
-                  <div
-                    ref={homeJoinBetaRef}
-                    className="flex justify-center gap-4 animate-fade-in-up"
-                    style={{ animationDelay: '0.4s' }}
-                  >
-                    <a
-                      href="/beta-signup"
-                      className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all hover:scale-105 transform"
-                    >
-                      Join Beta
-                    </a>
-                  </div>
-                </div>
-              </section>
+              <section className="pt-20 pb-10 px-4 bg-gradient-to-b from-yellow-100 to-yellow-50">
+  <div className="max-w-6xl mx-auto text-center animate-fade-in">
+    <h1 className="text-5xl md:text-6xl mt-8 font-bold text-gray-900 mb-6 animate-slide-up">
+      Readaroo
+      <span className="block text-3xl md:text-4xl text-purple-600 mt-2 animate-color-pulse">
+        A Fun Way to Learn!
+      </span>
+    </h1>
+    <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+      An engaging game that makes reading easier for kids with dyslexia!
+    </p>
+    <div
+      ref={homeJoinBetaRef}
+      className="flex justify-center gap-4 animate-fade-in-up"
+      style={{ animationDelay: '0.4s' }}
+    >
+      <a
+        href="/beta-signup"
+        className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all hover:scale-105 transform"
+      >
+        Join Beta
+      </a>
+    </div>
+  </div>
+
+  {/* Kids Image Under the Section */}
+  <div className="mt-12 flex justify-center">
+    <img
+      src="public/images/kids.jpg"
+      alt="Kids Reading"
+      className="w-full max-w-3xl rounded-lg shadow-lg"
+    />
+  </div>
+</section>
 
               {/* Game Overview */}
               <section className="py-20 bg-white">
@@ -284,34 +298,77 @@ function App() {
 
     {/* Phone Mockups */}
 <div className="mt-16 relative flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-  {/* Floating Phone 1 */}
-  <img
-    src="images/Screenshot-1.png"
-    alt="Phone Mockup 1"
-    className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-    style={{ animationDelay: '0.2s' }}
-  />
+  {/* Mobile View Swiper */}
+  <Swiper
+    spaceBetween={20} // Added space between slides
+    slidesPerView={1}
+    loop={true}
+    autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay continues after interaction
+    centeredSlides={true} // Center the current slide
+    breakpoints={{
+      640: {
+        slidesPerView: 1, // 1 slide on mobile
+      },
+      768: {
+        slidesPerView: 2, // 2 slides on tablet
+        spaceBetween: 30, // Adjust space for tablet
+      },
+      1024: {
+        slidesPerView: 3, // 3 slides on desktop
+        spaceBetween: 40, // More space for desktop
+      },
+    }}
+    className="w-full"
+  >
+    {/* Slide 2 */}
+    <SwiperSlide>
+      <div className="relative flex justify-center">
+        <img
+          src="images/Screenshot-2.png"
+          alt="Phone Mockup 2"
+          className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+        />
+        {/* Additional hover effect */}
+        <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+      </div>
+    </SwiperSlide>
+    {/* Slide 1 */}
+    <SwiperSlide>
+      <div className="flex center">
+        <img
+          src="images/Screenshot-1.png"
+          alt="Phone Mockup 1"
+          className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+        />
+      </div>
+    </SwiperSlide>
 
-  {/* Central Phone */}
-  <img
-    src="images/Screenshot-2.png"
-    alt="Phone Mockup 2"
-    className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-    style={{ animationDelay: '0.4s' }}
-  />
-
-  {/* Floating Phone 3 */}
-  <img
-    src="images/Screenshot-3.png"
-    alt="Phone Mockup 3"
-    className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-    style={{ animationDelay: '0.6s' }}
-  />
-    </div>
-  </div>
+    {/* Slide 2 */}
+    <SwiperSlide>
+      <div className="relative flex justify-center">
+        <img
+          src="images/Screenshot-2.png"
+          alt="Phone Mockup 2"
+          className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+        />
+        {/* Additional hover effect */}
+        <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+      </div>
+    </SwiperSlide>
+    {/* Slide 3 */}
+    <SwiperSlide>
+      <div className="flex justify-center">
+        <img
+          src="images/Screenshot-3.png"
+          alt="Phone Mockup 3"
+          className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+        />
+      </div>
+    </SwiperSlide>
+  </Swiper>
+</div>
+</div>
 </section>
-
-
               {/* FAQ Section */}
               <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4">

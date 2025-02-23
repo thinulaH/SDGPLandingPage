@@ -32,6 +32,8 @@
   animation-fill-mode: forwards;
 }
 
+
+
 .animate-color-pulse {
   animation: colorPulse 3s infinite;
 }
@@ -39,4 +41,37 @@
 /* Add smooth transitions for all interactive elements */
 a, button, input, textarea {
   transition: all 0.3s ease;
+}
+
+@keyframes pulse-shadow {
+  0% {
+    filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 30px rgba(99, 102, 241, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 15px rgba(99, 102, 241, 0.4));
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-shadow {
+  animation: pulse-shadow 3s ease-in-out infinite;
+}
+
+.swiper-slide-active .phone-mockup {
+  transform: scale(1.1);
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.glass-effect {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
 }
