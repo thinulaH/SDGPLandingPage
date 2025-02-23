@@ -251,69 +251,66 @@ function App() {
                 </div>
               </section>
 
-               {/* Mobile Apps Coming Soon Section */}
-              <section className="py-20 bg-white relative overflow-hidden">
-                <div className="max-w-6xl mx-auto px-4 text-center">
-                  <h2 className="text-3xl font-bold mb-6 animate-fade-in-up">
-                    Mobile Apps Coming Soon!
-                  </h2>
-                  <p className="text-lg text-gray-600 mb-8 animate-fade-in-up">
-                    Stay tuned for our mobile apps on Google Play Store and Apple App Store.
-                  </p>
-                  <div className="flex justify-center gap-8 animate-fade-in-up">
-                    {/* Google Play Store Icon */}
-                    <a
-                      href="#"
-                      className="transform hover:scale-105 transition-all duration-300"
-                    >
-                      <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-                        alt="Google Play Store"
-                        className="h-16"
-                      />
-                    </a>
+{/* Mobile Apps Coming Soon Section */}
+<section className="py-20 bg-white relative overflow-hidden">
+  <div className="max-w-6xl mx-auto px-4 text-center">
+    <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up">
+      Mobile Apps Coming Soon!
+    </h2>
+    <p className="text-lg text-gray-600 mb-8 animate-fade-in-up">
+      Stay tuned for our mobile apps on Google Play Store and Apple App Store.
+    </p>
+    
+    {/* Store Buttons */}
+    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 animate-fade-in-up">
+      {/* Google Play Store Icon */}
+      <a href="#" className="transform hover:scale-105 transition-all duration-300">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+          alt="Google Play Store"
+          className="h-12 sm:h-16 w-auto"
+        />
+      </a>
+      
+      {/* Apple App Store Icon */}
+      <a href="#" className="transform hover:scale-105 transition-all duration-300">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+          alt="Apple App Store"
+          className="h-12 sm:h-16 w-auto"
+        />
+      </a>
+    </div>
 
-                    {/* Apple App Store Icon */}
-                    <a
-                      href="#"
-                      className="transform hover:scale-105 transition-all duration-300"
-                    >
-                      <img
-                        alt="Apple App Store"
-                        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-                        className="h-16"
-                      />
-                    </a>
-                  </div>
+    {/* Phone Mockups */}
+<div className="mt-16 relative flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+  {/* Floating Phone 1 */}
+  <img
+    src="images/Screenshot-1.png"
+    alt="Phone Mockup 1"
+    className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+    style={{ animationDelay: '0.2s' }}
+  />
 
-                  {/* Phone Mockups */}
-                  <div className="mt-16 relative">
-                    {/* Floating Phone 1 */}
-                    <img
-                      alt="Phone Mockup 1"
-                      src="images/Screenshot 2025-02-23 at 04.48.25-landscape.png"
-                      className="w-64 absolute -top-16 left-0 animate-float"
-                      style={{ animationDelay: '0.2s' }}
-                      />
+  {/* Central Phone */}
+  <img
+    src="images/Screenshot-2.png"
+    alt="Phone Mockup 2"
+    className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+    style={{ animationDelay: '0.4s' }}
+  />
 
-                    {/* Floating Phone 2 */}
-                    <img  
-                      src="images/04E9337E-0B94-4254-9FDA-9EFF8571076F_1_201_a-landscape.png"
-                      alt="Phone Mockup 2"
-                      className="w-64 absolute -top-16 right-0 animate-float"
-                      style={{ animationDelay: '0.4s' }}
-                    />
+  {/* Floating Phone 3 */}
+  <img
+    src="images/Screenshot-3.png"
+    alt="Phone Mockup 3"
+    className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+    style={{ animationDelay: '0.6s' }}
+  />
+    </div>
+  </div>
+</section>
 
-                    {/* Central Phone */}
-                    <img
-                      src="images/Screenshot 2025-02-23 at 04.48.00-left.png"
-                      alt="Phone Mockup 3"
-                      className="w-72 mx-auto relative z-10 animate-float"
-                      style={{ animationDelay: '0.6s' }}
-                    />
-                  </div>
-                </div>
-              </section>
 
               {/* FAQ Section */}
               <section className="py-20 bg-gray-50">
