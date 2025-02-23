@@ -376,9 +376,9 @@ function App() {
                     <div className="transform hover:scale-105 transition-all duration-300">
                       <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
                       <div className="space-y-2">
-                        <a href="mailto:contact@Readaroo.com" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
+                        <a href="mailto:teamreadaroo@gmail.com" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
                           <Mail className="w-5 h-5" />
-                          contact@Readaroo.com
+                          teamreadaroo@gmail.com
                         </a>
                         <a href="#" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
                           <MessageSquare className="w-5 h-5" />
