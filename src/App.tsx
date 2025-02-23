@@ -150,7 +150,7 @@ function App() {
   {/* Kids Image Under the Section */}
   <div className="mt-12 flex justify-center">
     <img
-      src="public/images/kids.jpg"
+      src="/images/kids.jpg"
       alt="Kids Reading"
       className="w-full max-w-3xl rounded-lg shadow-lg"
     />
@@ -449,6 +449,9 @@ function App() {
                     <div className="transform hover:scale-105 transition-all duration-300">
                       <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
                       <div className="flex space-x-4">
+                        <a href="https://www.linkedin.com/company/readaroo/" className="hover:text-gray-300 transition-colors">
+                          <Linkedin className="w-6 h-6" />
+                        </a>
                         <a href="https://github.com/ashenalwiz/Project-Snikersnap" className="hover:text-gray-300 transition-colors">
                           <Github className="w-6 h-6" />
                         </a>
