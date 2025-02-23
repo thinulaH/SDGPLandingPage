@@ -371,55 +371,55 @@ function App() {
 
               
               <footer className="relative bg-[#634f87] text-white py-12 overflow-hidden">
-  {/* Argyle Pattern Overlay */}
-  <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/argyle.png')] opacity-20 pointer-events-none"></div>
+                {/* Argyle Pattern Overlay */}
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/argyle.png')] opacity-20 pointer-events-none"></div>
 
-  <div className="relative max-w-6xl mx-auto px-4">
-    <div className="grid md:grid-cols-3 gap-8">
-      <div className="transform hover:scale-105 transition-all duration-300">
-        <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
-        <div className="space-y-2">
-          <a href="mailto:teamreadaroo@gmail.com" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-            <Mail className="w-5 h-5" />
-            teamreadaroo@gmail.com
-          </a>
-          <a href="#" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-            <MessageSquare className="w-5 h-5" />
-            Live Chat Support
-          </a>
-        </div>
-      </div>
-      <div className="transform hover:scale-105 transition-all duration-300">
-        <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
-        <div className="flex space-x-4">
-          <a href="https://github.com/ashenalwiz/Project-Snikersnap" className="hover:text-gray-300 transition-colors">
-            <Github className="w-6 h-6" />
-          </a>
-          <a href="https://www.instagram.com/readaroo/" className="hover:text-gray-300 transition-colors">
-            <Instagram className="w-6 h-6" />
-          </a>
-        </div>
-      </div>
-      <div className="transform hover:scale-105 transition-all duration-300">
-        <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
-        <p className="mb-4">Stay updated with our latest developments</p>
-        <div className="flex">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="px-4 py-2 rounded-l-md w-full text-gray-900 transition-all duration-300"
-          />
-          <button className="bg-gray-900 px-4 py-2 rounded-r-md hover:bg-gray-800 transition-all duration-300">
-            Subscribe
-          </button>
-        </div>
-      </div>
-    </div>
-    <div className="mt-8 pt-8 border-t border-gray-500 text-center">
-      <p>&copy; 2024 Readaroo. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+                <div className="relative max-w-6xl mx-auto px-4">
+                  <div className="grid md:grid-cols-3 gap-8">
+                    <div className="transform hover:scale-105 transition-all duration-300">
+                      <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
+                      <div className="space-y-2">
+                        <a href="mailto:teamreadaroo@gmail.com" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                          <Mail className="w-5 h-5" />
+                          teamreadaroo@gmail.com
+                        </a>
+                        <a href="#" className="flex items-center gap-2 hover:text-gray-300 transition-colors">
+                          <MessageSquare className="w-5 h-5" />
+                          Live Chat Support
+                        </a>
+                      </div>
+                    </div>
+                    <div className="transform hover:scale-105 transition-all duration-300">
+                      <h3 className="text-xl font-semibold mb-4">Follow Us</h3>
+                      <div className="flex space-x-4">
+                        <a href="https://github.com/ashenalwiz/Project-Snikersnap" className="hover:text-gray-300 transition-colors">
+                          <Github className="w-6 h-6" />
+                        </a>
+                        <a href="https://www.instagram.com/readaroo/" className="hover:text-gray-300 transition-colors">
+                          <Instagram className="w-6 h-6" />
+                        </a>
+                      </div>
+                    </div>
+                    <div className="transform hover:scale-105 transition-all duration-300">
+                      <h3 className="text-xl font-semibold mb-4">Newsletter</h3>
+                      <p className="mb-4">Stay updated with our latest developments</p>
+                      <div className="flex">
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
+                          className="px-4 py-2 rounded-l-md w-full text-gray-900 transition-all duration-300"
+                        />
+                        <button className="bg-gray-900 px-4 py-2 rounded-r-md hover:bg-gray-800 transition-all duration-300">
+                          Subscribe
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mt-8 pt-8 border-t border-gray-500 text-center">
+                    <p>&copy; 2024 Readaroo. All rights reserved.</p>
+                  </div>
+                </div>
+              </footer>
             </div>
           }
         />
