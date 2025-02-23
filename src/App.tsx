@@ -49,7 +49,7 @@ function App() {
     {
       name: "Sithumi",
       role: "Lead Game Developer",
-      image: "public/images/Sithumi.jpeg",
+      image: "/public/images/Sithumi.jpeg",
       linkedin: "#",
       github: "#"
     },
@@ -70,7 +70,7 @@ function App() {
     {
       name: "Thinula",
       role: "Content Strategist",
-      image: "public/images/Thinula.png",
+      image: "/public/images/Thinula.png",
       linkedin: "https://www.linkedin.com/in/thinula-harischandra-218208272/",
       github: "https://github.com/thinulaH"
     },
