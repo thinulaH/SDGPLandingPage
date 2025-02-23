@@ -68,12 +68,12 @@ const Navbar: React.FC<NavbarProps> = ({ showJoinBeta }) => {
             {/* Logo */}
             <img
               src="/images/LOGO.png" // Path to your logo image
-              alt="ReadAroo Logo"
+              alt="Readaroo Logo"
               className="h-12 w-auto" // Adjust size as needed
             />
             {/* Text */}
             <span className="text-3xl font-extrabold text-[#FFD700] tracking-wide">
-              ReadAroo
+              Readaroo
             </span>
           </Link>
 

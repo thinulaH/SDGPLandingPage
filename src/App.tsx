@@ -41,45 +41,45 @@ function App() {
   const teamMembers = [
     {
       name: "Ashen",
-      role: "Team Lead",
+      role: "",
       image: "images/Ashen.jpg",
       linkedin: "https://www.linkedin.com/in/ashen-alwis-3626a0274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       github: "https://github.com/ashenalwiz"
     },
     {
       name: "Sithumi",
-      role: "Lead Game Developer",
+      role: "",
       image: "images/Sithumi.jpeg",
       linkedin: "#",
-      github: "#"
+      github: "https://github.com/Sithumi-SS"
     },
     {
       name: "Dulmina",
-      role: "UX Designer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      role: "",
+      image: "images/Dulmina.jpg",
       linkedin: "#",
       github: "#"
     },
     {
       name: "Thrishali",
-      role: "Backend Developer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      linkedin: "#",
-      github: "#"
+      role: "",
+      image: "images/Thrishali.jpg",
+      linkedin: "www.linkedin.com/in/thrishali-gamage-11844a294",
+      github: "https://github.com/ThrishaliN"
     },
     {
       name: "Thinula",
-      role: "Content Strategist",
+      role: "",
       image: "/images/Thinula.png",
       linkedin: "https://www.linkedin.com/in/thinula-harischandra-218208272/",
       github: "https://github.com/thinulaH"
     },
     {
       name: "Afra",
-      role: "Game Artist",
-      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      linkedin: "#",
-      github: "#"
+      role: "",
+      image: "images/Afra.jpg",
+      linkedin: "https://www.linkedin.com/in/fathima-afra-87a2a3303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      github: "https://github.com/Afra10"
     }
   ];
 
@@ -91,11 +91,11 @@ function App() {
     },
     {
       question: "What ages is it for?",
-      answer: "ReadAroo is designed for children aged 5-10 years old, with different difficulty levels to match their learning pace."
+      answer: "Readaroo is designed for children aged 5-10 years old, with different difficulty levels to match their learning pace."
     },
     {
       question: "Does it work on all devices?",
-      answer: "ReadAroo will only work on mobile phones and tablets (iOS and Android)."
+      answer: "Readaroo will only work on mobile phones and tablets (iOS and Android)."
     },
     {
       question: "How does progress tracking work?",
@@ -120,7 +120,7 @@ function App() {
               <section className="pt-20 pb-32 px-4 bg-gradient-to-b from-yellow-100 to-yellow-50">
                 <div className="max-w-6xl mx-auto text-center animate-fade-in">
                   <h1 className="text-5xl md:text-6xl mt-8 font-bold text-gray-900 mb-6 animate-slide-up">
-                    ReadAroo
+                    Readaroo
                     <span className="block text-3xl md:text-4xl text-purple-600 mt-2 animate-color-pulse">
                       A Fun Way to Learn!
                     </span>
@@ -148,9 +148,9 @@ function App() {
                 <div className="max-w-6xl mx-auto px-4">
                   <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                      <h2 className="text-3xl font-bold mb-6">What is ReadAroo?</h2>
+                      <h2 className="text-3xl font-bold mb-6">What is Readaroo?</h2>
                       <p className="text-lg text-gray-600 mb-6">
-                        ReadAroo is a fun and interactive game that helps children with dyslexia improve their reading skills through engaging exercises and personalized learning paths.
+                        Readaroo is a fun and interactive game that helps children with dyslexia improve their reading skills through engaging exercises and personalized learning paths.
                       </p>
                       <div className="space-y-4">
                         <div className="flex items-center gap-3">
@@ -376,9 +376,9 @@ function App() {
                     <div className="transform hover:scale-105 transition-all duration-300">
                       <h3 className="text-xl font-semibold mb-4">Contact Us</h3>
                       <div className="space-y-2">
-                        <a href="mailto:contact@readaroo.com" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
+                        <a href="mailto:contact@Readaroo.com" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
                           <Mail className="w-5 h-5" />
-                          contact@readaroo.com
+                          contact@Readaroo.com
                         </a>
                         <a href="#" className="flex items-center gap-2 hover:text-purple-400 transition-colors">
                           <MessageSquare className="w-5 h-5" />
@@ -413,7 +413,7 @@ function App() {
                     </div>
                   </div>
                   <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-                    <p>&copy; 2024 ReadAroo. All rights reserved.</p>
+                    <p>&copy; 2024 Readaroo. All rights reserved.</p>
                   </div>
                 </div>
               </footer>
