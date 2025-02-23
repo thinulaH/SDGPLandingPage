@@ -42,14 +42,14 @@ function App() {
     {
       name: "Ashen",
       role: "Team Lead",
-      image: "public/images/Ashen.jpg",
+      image: "images/Ashen.jpg",
       linkedin: "https://www.linkedin.com/in/ashen-alwis-3626a0274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       github: "https://github.com/ashenalwiz"
     },
     {
       name: "Sithumi",
       role: "Lead Game Developer",
-      image: "/public/images/Sithumi.jpeg",
+      image: "images/Sithumi.jpeg",
       linkedin: "#",
       github: "#"
     },
@@ -179,7 +179,7 @@ function App() {
                 <div className="max-w-6xl mx-auto px-4">
                   <div className="relative group overflow-hidden rounded-lg shadow-lg">
                     <img
-                      src="public/images/Colorful Organic Child Psychology Presentation.png"
+                      src="images/Colorful Organic Child Psychology Presentation.png"
                       alt="Hero Section Image"
                       className="w-full transform transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:rotate-2 rounded-lg"
                       loading="lazy"
@@ -291,14 +291,14 @@ function App() {
                     {/* Floating Phone 1 */}
                     <img
                       alt="Phone Mockup 1"
-                      src="public/images/Screenshot 2025-02-23 at 04.48.25-landscape.png"
+                      src="images/Screenshot 2025-02-23 at 04.48.25-landscape.png"
                       className="w-64 absolute -top-16 left-0 animate-float"
                       style={{ animationDelay: '0.2s' }}
                       />
 
                     {/* Floating Phone 2 */}
                     <img  
-                      src="public/images/04E9337E-0B94-4254-9FDA-9EFF8571076F_1_201_a-landscape.png"
+                      src="images/04E9337E-0B94-4254-9FDA-9EFF8571076F_1_201_a-landscape.png"
                       alt="Phone Mockup 2"
                       className="w-64 absolute -top-16 right-0 animate-float"
                       style={{ animationDelay: '0.4s' }}
@@ -306,7 +306,7 @@ function App() {
 
                     {/* Central Phone */}
                     <img
-                      src="public/images/Screenshot 2025-02-23 at 04.48.00-left.png"
+                      src="images/Screenshot 2025-02-23 at 04.48.00-left.png"
                       alt="Phone Mockup 3"
                       className="w-72 mx-auto relative z-10 animate-float"
                       style={{ animationDelay: '0.6s' }}

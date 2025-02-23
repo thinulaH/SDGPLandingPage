@@ -32,7 +32,7 @@ const Loading: React.FC = () => {
           }}
         >
           <img
-            src="public/images/LOGO.png"
+            src="images/LOGO.png"
             alt="Logo"
             style={{
               maxWidth: '100%',
