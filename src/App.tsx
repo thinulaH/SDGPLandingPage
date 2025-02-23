@@ -70,7 +70,7 @@ function App() {
     {
       name: "Thinula",
       role: "Content Strategist",
-      image: "/public/images/Thinula.png",
+      image: "/images/Thinula.png",
       linkedin: "https://www.linkedin.com/in/thinula-harischandra-218208272/",
       github: "https://github.com/thinulaH"
     },
