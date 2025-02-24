@@ -29,7 +29,7 @@ const BetaSignup = () => {
     setIsLoading(true);
     
     try {
-      await addDoc(collection(db, 'beta-signups'), {
+      await addDoc(collection(db, 'beta-signup'), {
         ...formData,
         timestamp: new Date()
       });
