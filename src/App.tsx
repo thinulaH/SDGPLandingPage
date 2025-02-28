@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Loading from './components/Loading';
+import { Link } from "react-router-dom";
 
 import BetaSignup from './pages/BetaSignup';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,26 +13,7 @@ import 'swiper/css/pagination';
 import { BookOpen, Brain, Users, Mail, Github, Linkedin, MessageSquare, Headphones, GamepadIcon, HelpCircle, Instagram } from 'lucide-react';
 
 function App() {
-  const [showNavJoinBeta, setShowNavJoinBeta] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
-  const homeJoinBetaRef = useRef<HTMLDivElement>(null);
-
-  // Handle scroll to show/hide the Navbar "Join Beta" button
-  useEffect(() => {
-    const handleScroll = () => {
-      if (homeJoinBetaRef.current) {
-        const homeJoinBetaButton = homeJoinBetaRef.current;
-        const rect = homeJoinBetaButton.getBoundingClientRect();
-        const isHomeJoinBetaVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
-
-        // Show the Navbar "Join Beta" button only if the home button is not visible
-        setShowNavJoinBeta(!isHomeJoinBetaVisible);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Simulate loading for 2 seconds
   useEffect(() => {
@@ -115,7 +97,8 @@ function App() {
 
   return (
     <Router>
-      <Navbar showJoinBeta={showNavJoinBeta} />
+      {/* Remove the showJoinBeta prop from Navbar */}
+      <Navbar />
       <Routes>
         <Route
           path="/"
@@ -123,40 +106,40 @@ function App() {
             <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-purple-50">
               {/* Hero Section */}
               <section className="pt-20 pb-10 px-4 bg-gradient-to-b from-yellow-100 to-yellow-50">
-  <div className="max-w-6xl mx-auto text-center animate-fade-in">
-    <h1 className="text-5xl md:text-6xl mt-8 font-bold text-gray-900 mb-6 animate-slide-up">
-      Readaroo
-      <span className="block text-3xl md:text-4xl text-purple-600 mt-2 animate-color-pulse">
-        A Fun Way to Learn!
-      </span>
-    </h1>
-    <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-      An engaging game that makes reading easier for kids with dyslexia!
-    </p>
-    <div
-      ref={homeJoinBetaRef}
-      className="flex justify-center gap-4 animate-fade-in-up"
-      style={{ animationDelay: '0.4s' }}
-    >
-      <a
-        href="/beta-signup"
-        className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all hover:scale-105 transform"
-      >
-        Join Beta
-      </a>
-    </div>
-  </div>
+                <div className="max-w-6xl mx-auto text-center animate-fade-in">
+                  <h1 className="text-5xl md:text-6xl mt-8 font-bold text-gray-900 mb-6 animate-slide-up">
+                    Readaroo
+                    <span className="block text-3xl md:text-4xl text-purple-600 mt-2 animate-color-pulse">
+                      A Fun Way to Learn!
+                    </span>
+                  </h1>
+                  <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
+                    An engaging game that makes reading easier for kids with dyslexia!
+                  </p>
+                  <div
+                    className="flex justify-center gap-4 animate-fade-in-up"
+                    style={{ animationDelay: "0.4s" }}
+                  >
+                    <Link
+                      to="/beta-signup"
+                      className="bg-purple-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-purple-700 transition-all hover:scale-105 transform"
+                    >
+                      Join Waitlist
+                    </Link>
+                  </div>
 
-  {/* Kids Image Under the Section */}
-  <div className="mt-12 flex justify-center">
-    <img
-      src="/images/kids.jpg"
-      alt="Kids Reading"
-      className="w-full max-w-3xl rounded-lg shadow-lg"
-    />
-  </div>
-</section>
+                  {/* Kids Image Under the Section */}
+                  <div className="mt-12 flex justify-center">
+                    <img
+                      src="/images/kids.jpg"
+                      alt="Kids Reading"
+                      className="w-full max-w-3xl rounded-lg shadow-lg"
+                    />
+                  </div>
+                </div>
+              </section>
 
+              {/* Rest of the sections remain unchanged */}
               {/* Game Overview */}
               <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4">
@@ -265,110 +248,111 @@ function App() {
                 </div>
               </section>
 
-{/* Mobile Apps Coming Soon Section */}
-<section className="py-20 bg-white relative overflow-hidden">
-  <div className="max-w-6xl mx-auto px-4 text-center">
-    <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up">
-      Mobile Apps Coming Soon!
-    </h2>
-    <p className="text-lg text-gray-600 mb-8 animate-fade-in-up">
-      Stay tuned for our mobile apps on Google Play Store and Apple App Store.
-    </p>
-    
-    {/* Store Buttons */}
-    <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 animate-fade-in-up">
-      {/* Google Play Store Icon */}
-      <a href="#" className="transform hover:scale-105 transition-all duration-300">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
-          alt="Google Play Store"
-          className="h-12 sm:h-16 w-auto"
-        />
-      </a>
-      
-      {/* Apple App Store Icon */}
-      <a href="#" className="transform hover:scale-105 transition-all duration-300">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
-          alt="Apple App Store"
-          className="h-12 sm:h-16 w-auto"
-        />
-      </a>
-    </div>
+              {/* Mobile Apps Coming Soon Section */}
+              <section className="py-20 bg-white relative overflow-hidden">
+                <div className="max-w-6xl mx-auto px-4 text-center">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 animate-fade-in-up">
+                    Mobile Apps Coming Soon!
+                  </h2>
+                  <p className="text-lg text-gray-600 mb-8 animate-fade-in-up">
+                    Stay tuned for our mobile apps on Google Play Store and Apple App Store.
+                  </p>
 
-    {/* Phone Mockups */}
-<div className="mt-16 relative flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-  {/* Mobile View Swiper */}
-  <Swiper
-    spaceBetween={20} // Added space between slides
-    slidesPerView={1}
-    loop={true}
-    autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay continues after interaction
-    centeredSlides={true} // Center the current slide
-    breakpoints={{
-      640: {
-        slidesPerView: 1, // 1 slide on mobile
-      },
-      768: {
-        slidesPerView: 2, // 2 slides on tablet
-        spaceBetween: 30, // Adjust space for tablet
-      },
-      1024: {
-        slidesPerView: 3, // 3 slides on desktop
-        spaceBetween: 40, // More space for desktop
-      },
-    }}
-    className="w-full"
-  >
-    {/* Slide 2 */}
-    <SwiperSlide>
-      <div className="relative flex justify-center">
-        <img
-          src="images/Screenshot-2.png"
-          alt="Phone Mockup 2"
-          className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-        />
-        {/* Additional hover effect */}
-        <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-      </div>
-    </SwiperSlide>
-    {/* Slide 1 */}
-    <SwiperSlide>
-      <div className="flex center">
-        <img
-          src="images/Screenshot-1.png"
-          alt="Phone Mockup 1"
-          className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-        />
-      </div>
-    </SwiperSlide>
+                  {/* Store Buttons */}
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-8 animate-fade-in-up">
+                    {/* Google Play Store Icon */}
+                    <a href="#" className="transform hover:scale-105 transition-all duration-300">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                        alt="Google Play Store"
+                        className="h-12 sm:h-16 w-auto"
+                      />
+                    </a>
 
-    {/* Slide 2 */}
-    <SwiperSlide>
-      <div className="relative flex justify-center">
-        <img
-          src="images/Screenshot-2.png"
-          alt="Phone Mockup 2"
-          className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-        />
-        {/* Additional hover effect */}
-        <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-      </div>
-    </SwiperSlide>
-    {/* Slide 3 */}
-    <SwiperSlide>
-      <div className="flex justify-center">
-        <img
-          src="images/Screenshot-3.png"
-          alt="Phone Mockup 3"
-          className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-        />
-      </div>
-    </SwiperSlide>
-  </Swiper>
-</div>
-</div>
-</section>
+                    {/* Apple App Store Icon */}
+                    <a href="#" className="transform hover:scale-105 transition-all duration-300">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                        alt="Apple App Store"
+                        className="h-12 sm:h-16 w-auto"
+                      />
+                    </a>
+                  </div>
+
+                  {/* Phone Mockups */}
+                  <div className="mt-16 relative flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
+                    {/* Mobile View Swiper */}
+                    <Swiper
+                      spaceBetween={20} // Added space between slides
+                      slidesPerView={1}
+                      loop={true}
+                      autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay continues after interaction
+                      centeredSlides={true} // Center the current slide
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1, // 1 slide on mobile
+                        },
+                        768: {
+                          slidesPerView: 2, // 2 slides on tablet
+                          spaceBetween: 30, // Adjust space for tablet
+                        },
+                        1024: {
+                          slidesPerView: 3, // 3 slides on desktop
+                          spaceBetween: 40, // More space for desktop
+                        },
+                      }}
+                      className="w-full"
+                    >
+                      {/* Slide 2 */}
+                      <SwiperSlide>
+                        <div className="relative flex justify-center">
+                          <img
+                            src="images/Screenshot-2.png"
+                            alt="Phone Mockup 2"
+                            className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+                          />
+                          {/* Additional hover effect */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                        </div>
+                      </SwiperSlide>
+                      {/* Slide 1 */}
+                      <SwiperSlide>
+                        <div className="flex center">
+                          <img
+                            src="images/Screenshot-1.png"
+                            alt="Phone Mockup 1"
+                            className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+                          />
+                        </div>
+                      </SwiperSlide>
+
+                      {/* Slide 2 */}
+                      <SwiperSlide>
+                        <div className="relative flex justify-center">
+                          <img
+                            src="images/Screenshot-2.png"
+                            alt="Phone Mockup 2"
+                            className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+                          />
+                          {/* Additional hover effect */}
+                          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
+                        </div>
+                      </SwiperSlide>
+                      {/* Slide 3 */}
+                      <SwiperSlide>
+                        <div className="flex justify-center">
+                          <img
+                            src="images/Screenshot-3.png"
+                            alt="Phone Mockup 3"
+                            className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
+                          />
+                        </div>
+                      </SwiperSlide>
+                    </Swiper>
+                  </div>
+                </div>
+              </section>
+
               {/* FAQ Section */}
               <section className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4">
@@ -426,7 +410,7 @@ function App() {
                 </div>
               </section>
 
-              
+              {/* Footer Section */}
               <footer className="relative bg-[#634f87] text-white py-12 overflow-hidden">
                 {/* Argyle Pattern Overlay */}
                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/argyle.png')] opacity-20 pointer-events-none"></div>

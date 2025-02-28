@@ -3,13 +3,12 @@ import { Link } from 'react-router-dom';
 import { Menu } from 'lucide-react';
 
 interface NavbarProps {
-  showJoinBeta: boolean;
+  // Remove the showJoinBeta prop since the button will always be visible
 }
 
-const Navbar: React.FC<NavbarProps> = ({ showJoinBeta }) => {
+const Navbar: React.FC<NavbarProps> = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>('/');
-  const [isRemoving, setIsRemoving] = useState<boolean>(false); // Track if the button is being removed
   const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   // Smooth scroll function
@@ -33,17 +32,6 @@ const Navbar: React.FC<NavbarProps> = ({ showJoinBeta }) => {
       scrollToTop(); // Scroll to top when "Home" is clicked
     }
   };
-
-  // Handle the "Join Beta" button removal animation
-  useEffect(() => {
-    if (!showJoinBeta) {
-      setIsRemoving(true); // Start the removal animation
-      const timeout = setTimeout(() => {
-        setIsRemoving(false); // Reset after animation completes
-      }, 300); // Match the duration of the slide-out animation
-      return () => clearTimeout(timeout);
-    }
-  }, [showJoinBeta]);
 
   useEffect(() => {
     if (mobileMenuRef.current) {
@@ -138,18 +126,14 @@ const Navbar: React.FC<NavbarProps> = ({ showJoinBeta }) => {
               ></span>
             </a>
 
-            {/* Join Beta Button */}
-            {(showJoinBeta || isRemoving) && (
-              <Link
-                to="/beta-signup"
-                className={`bg-[#FF6F61] text-white px-5 py-2 rounded-full hover:bg-[#FFA500] transition-all duration-200 ease-in-out ${
-                  showJoinBeta ? 'animate-slide-in' : 'animate-slide-out'
-                }`}
-                onClick={() => handleTabClick('/beta-signup')}
-              >
-                Join Beta
-              </Link>
-            )}
+            {/* Join Waitlist Button (Always Visible) */}
+            <Link
+              to="/beta-signup"
+              className="bg-[#FF6F61] text-white px-5 py-2 rounded-full hover:bg-[#FFA500] transition-all duration-200 ease-in-out"
+              onClick={() => handleTabClick('/beta-signup')}
+            >
+              Join Waitlist
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -207,17 +191,16 @@ const Navbar: React.FC<NavbarProps> = ({ showJoinBeta }) => {
             >
               Team
             </a>
-            {(showJoinBeta || isRemoving) && (
-              <Link
-                to="/beta-signup"
-                className={`block px-4 py-2 text-xl font-medium rounded-md hover:bg-[#FF6F61] transition duration-200 ${
-                  activeTab === '/beta-signup' ? 'bg-[#FF6F61] text-white' : 'bg-[#FFA500] text-white'
-                }`}
-                onClick={() => handleTabClick('/beta-signup')}
-              >
-                Join Beta
-              </Link>
-            )}
+            {/* Join Waitlist Button (Always Visible) */}
+            <Link
+              to="/beta-signup"
+              className={`block px-4 py-2 text-xl font-medium rounded-md hover:bg-[#FF6F61] transition duration-200 ${
+                activeTab === '/beta-signup' ? 'bg-[#FF6F61] text-white' : 'bg-[#FFA500] text-white'
+              }`}
+              onClick={() => handleTabClick('/beta-signup')}
+            >
+              Join Waitlist
+            </Link>
           </div>
         </div>
       </div>
