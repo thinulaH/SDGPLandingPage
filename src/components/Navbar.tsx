@@ -126,14 +126,7 @@ const Navbar: React.FC<NavbarProps> = () => {
               ></span>
             </a>
 
-            {/* Join Waitlist Button (Always Visible) */}
-            <Link
-              to="/beta-signup"
-              className="bg-[#FF6F61] text-white px-5 py-2 rounded-full hover:bg-[#FFA500] transition-all duration-200 ease-in-out"
-              onClick={() => handleTabClick('/beta-signup')}
-            >
-              Join Waitlist
-            </Link>
+            
           </div>
 
           {/* Mobile Menu Button */}
@@ -191,16 +184,7 @@ const Navbar: React.FC<NavbarProps> = () => {
             >
               Team
             </a>
-            {/* Join Waitlist Button (Always Visible) */}
-            <Link
-              to="/beta-signup"
-              className={`block px-4 py-2 text-xl font-medium rounded-md hover:bg-[#FF6F61] transition duration-200 ${
-                activeTab === '/beta-signup' ? 'bg-[#FF6F61] text-white' : 'bg-[#FFA500] text-white'
-              }`}
-              onClick={() => handleTabClick('/beta-signup')}
-            >
-              Join Waitlist
-            </Link>
+            
           </div>
         </div>
       </div>
