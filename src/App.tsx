@@ -28,42 +28,42 @@ function App() {
   const teamMembers = [
     {
       name: "Ashen",
-      role: "",
+      role: "Team Leader & Game Developer",
       image: "images/Ashen.jpg",
       linkedin: "https://www.linkedin.com/in/ashen-alwis-3626a0274?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       github: "https://github.com/ashenalwiz"
     },
     {
       name: "Sithumi",
-      role: "",
+      role: "Game Developer & Marketing Strategist",
       image: "images/Sithumi.jpeg",
       linkedin: "#",
       github: "https://github.com/Sithumi-SS"
     },
     {
       name: "Dulmina",
-      role: "",
+      role: "Game Developer & Sound Designer",
       image: "images/Dulmina.jpg",
       linkedin: "#",
       github: "#"
     },
     {
       name: "Thrishali",
-      role: "",
+      role: "Game Developer & UI/UX Designer",
       image: "images/Thrishali.jpg",
       linkedin: "www.linkedin.com/in/thrishali-gamage-11844a294",
       github: "https://github.com/ThrishaliN"
     },
     {
       name: "Thinula",
-      role: "",
+      role: "Game Developer & Data Science Specialist",
       image: "/images/Thinula.png",
       linkedin: "https://www.linkedin.com/in/thinula-harischandra-218208272/",
       github: "https://github.com/thinulaH"
     },
     {
       name: "Afra",
-      role: "",
+      role: "Game Developer & Social Media Manager",
       image: "images/Afra.jpg",
       linkedin: "https://www.linkedin.com/in/fathima-afra-87a2a3303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       github: "https://github.com/Afra10"
@@ -114,7 +114,7 @@ function App() {
                     </span>
                   </h1>
                   <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto animate-fade-in-up">
-                    An engaging game that makes reading easier for kids with dyslexia!
+                  An engaging game that supports learning and development for kids with dyslexia, making education fun and accessible!
                   </p>
                   <div
                     className="flex justify-center gap-4 animate-fade-in-up"
@@ -147,8 +147,7 @@ function App() {
                     <div>
                       <h2 className="text-3xl font-bold mb-6">What is Readaroo?</h2>
                       <p className="text-lg text-gray-600 mb-6">
-                        Readaroo is a fun and interactive game that helps children with dyslexia improve their reading skills through engaging exercises and personalized learning paths.
-                      </p>
+                          Readaroo is a fun, interactive game that helps children with dyslexia improve reading and other skills through engaging exercises and personalized learning paths.                      </p>
                       <div className="space-y-4">
                         <div className="flex items-center gap-3">
                           <GamepadIcon className="w-6 h-6 text-purple-600" />
@@ -196,28 +195,28 @@ function App() {
                         <Headphones className="w-8 h-8 text-purple-600" />
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Listen</h3>
-                      <p className="text-gray-600">Listen to the sounds and words</p>
+                      <p className="text-gray-600">Listen to sounds, words, and instructions</p>
                     </div>
                     <div className="text-center transform hover:scale-105 transition-all duration-300">
                       <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                         <BookOpen className="w-8 h-8 text-purple-600" />
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Match</h3>
-                      <p className="text-gray-600">Match letters and numbers</p>
+                      <p className="text-gray-600">Match audio to visuals in fun interactive exercises</p>
                     </div>
                     <div className="text-center transform hover:scale-105 transition-all duration-300">
                       <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                         <GamepadIcon className="w-8 h-8 text-purple-600" />
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Complete</h3>
-                      <p className="text-gray-600">Complete fun levels</p>
+                      <p className="text-gray-600">Complete engaging levels with progressive challenges</p>
                     </div>
                     <div className="text-center transform hover:scale-105 transition-all duration-300">
                       <div className="bg-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
                         <Brain className="w-8 h-8 text-purple-600" />
                       </div>
                       <h3 className="text-xl font-semibold mb-2">Track</h3>
-                      <p className="text-gray-600">Track your progress</p>
+                      <p className="text-gray-600">Track your learning progress and achievements</p>
                     </div>
                   </div>
                 </div>
@@ -229,20 +228,20 @@ function App() {
                   <h2 className="text-3xl font-bold text-center mb-16">Key Features</h2>
                   <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-                      <h3 className="text-xl font-semibold mb-4">Speech Recognition</h3>
-                      <p className="text-gray-600">Powered by Soapbox API & ML model for accurate voice detection</p>
+                      <h3 className="text-xl font-semibold mb-4">Dyslexia-Friendly Design</h3>
+                      <p className="text-gray-600">Uses accessible fonts and vibrant visuals for an intuitive experience</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
                       <h3 className="text-xl font-semibold mb-4">Personal Learning</h3>
                       <p className="text-gray-600">Adapts to each child's unique learning style and pace</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-                      <h3 className="text-xl font-semibold mb-4">Three Levels</h3>
-                      <p className="text-gray-600">Progressive difficulty with different exercise types</p>
+                      <h3 className="text-xl font-semibold mb-4">Interactive Games</h3>
+                      <p className="text-gray-600">Engaging activities with increasing complexity</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-                      <h3 className="text-xl font-semibold mb-4">Kid-Friendly</h3>
-                      <p className="text-gray-600">Colorful design with intuitive interface</p>
+                      <h3 className="text-xl font-semibold mb-4">Parental Dashboard</h3>
+                      <p className="text-gray-600">Track progress and adjust learning goals with ease</p>
                     </div>
                   </div>
                 </div>
