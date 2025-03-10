@@ -44,8 +44,8 @@ function App() {
       name: "Dulmina",
       role: "Game Developer & Sound Designer",
       image: "images/Dulmina.jpg",
-      linkedin: "#",
-      github: "#"
+      linkedin: "https://www.linkedin.com/in/dulmina-hettiarachchi-8aa923296",
+      github: "https://github.com/dulminahxxx"
     },
     {
       name: "Thrishali",
