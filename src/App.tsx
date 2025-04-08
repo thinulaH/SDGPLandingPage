@@ -6,11 +6,13 @@ import { Link } from "react-router-dom";
 
 import BetaSignup from './pages/BetaSignup';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Mousewheel } from 'swiper/modules'; // Import Mousewheel module
 import 'swiper/css'; // Import Swiper styles
 import 'swiper/css/effect-fade'; // Import additional effects if needed
 import 'swiper/css/navigation'; // If you're using navigation arrows
 import 'swiper/css/pagination';
-import { BookOpen, Brain, Users, Mail, Github, Linkedin, MessageSquare, Headphones, GamepadIcon, HelpCircle, Instagram } from 'lucide-react';
+import 'swiper/css/mousewheel'; // Import Mousewheel styles if needed
+import { BookOpen, Brain, Users, Mail, Github, Linkedin, MessageSquare, Headphones, GamepadIcon, HelpCircle, Instagram, Cpu } from 'lucide-react';
 
 function App() {
   const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
@@ -154,8 +156,8 @@ function App() {
                           <span>Gamified learning experience</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Headphones className="w-6 h-6 text-purple-600" />
-                          <span>Advanced speech recognition</span>
+                          <Cpu className="w-6 h-6 text-purple-600" /> {/* Changed icon to Cpu */}
+                          <span>Advanced chat bot</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <Brain className="w-6 h-6 text-purple-600" />
@@ -163,8 +165,14 @@ function App() {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
-                      <p className="text-gray-600">Game Preview Video Coming Soon</p>
+                    <div className="rounded-lg aspect-video overflow-hidden">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/bahryE0Xtio"
+                        title="Game Preview"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
                   </div>
                 </div>
@@ -232,8 +240,8 @@ function App() {
                       <p className="text-gray-600">Uses accessible fonts and vibrant visuals for an intuitive experience</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
-                      <h3 className="text-xl font-semibold mb-4">Personal Learning</h3>
-                      <p className="text-gray-600">Adapts to each child's unique learning style and pace</p>
+                      <h3 className="text-xl font-semibold mb-4">AI ChatBot</h3>
+                      <p className="text-gray-600">An intelligent chatbot that assists children with learning and provides instant feedback.</p>
                     </div>
                     <div className="bg-purple-50 p-6 rounded-lg transform hover:scale-105 transition-all duration-300">
                       <h3 className="text-xl font-semibold mb-4">Interactive Games</h3>
@@ -278,76 +286,32 @@ function App() {
                     </a>
                   </div>
 
-                  {/* Phone Mockups */}
-                  <div className="mt-16 relative flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12">
-                    {/* Mobile View Swiper */}
-                    <Swiper
-                      spaceBetween={20} // Added space between slides
-                      slidesPerView={1}
-                      loop={true}
-                      autoplay={{ delay: 3000, disableOnInteraction: false }} // Ensure autoplay continues after interaction
-                      centeredSlides={true} // Center the current slide
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1, // 1 slide on mobile
-                        },
-                        768: {
-                          slidesPerView: 2, // 2 slides on tablet
-                          spaceBetween: 30, // Adjust space for tablet
-                        },
-                        1024: {
-                          slidesPerView: 3, // 3 slides on desktop
-                          spaceBetween: 40, // More space for desktop
-                        },
-                      }}
-                      className="w-full"
-                    >
-                      {/* Slide 2 */}
-                      <SwiperSlide>
-                        <div className="relative flex justify-center">
-                          <img
-                            src="images/Screenshot-2.png"
-                            alt="Phone Mockup 2"
-                            className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-                          />
-                          {/* Additional hover effect */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                        </div>
-                      </SwiperSlide>
-                      {/* Slide 1 */}
-                      <SwiperSlide>
-                        <div className="flex center">
-                          <img
-                            src="images/Screenshot-1.png"
-                            alt="Phone Mockup 1"
-                            className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-                          />
-                        </div>
-                      </SwiperSlide>
-
-                      {/* Slide 2 */}
-                      <SwiperSlide>
-                        <div className="relative flex justify-center">
-                          <img
-                            src="images/Screenshot-2.png"
-                            alt="Phone Mockup 2"
-                            className="w-96 sm:w-128 md:w-144 relative z-10 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-                          />
-                          {/* Additional hover effect */}
-                          <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-3xl"></div>
-                        </div>
-                      </SwiperSlide>
-                      {/* Slide 3 */}
-                      <SwiperSlide>
-                        <div className="flex justify-center">
-                          <img
-                            src="images/Screenshot-3.png"
-                            alt="Phone Mockup 3"
-                            className="w-80 sm:w-104 md:w-128 animate-float hover:scale-110 transition-transform duration-500 ease-in-out"
-                          />
-                        </div>
-                      </SwiperSlide>
-                    </Swiper>
+                  {/* Modern Wall Art for Screenshots */}
+                  <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
+                    {[
+                      "images/Screenshot0.png",
+                      "images/Screenshot1.png",
+                      "images/Screenshot2.png",
+                      "images/Screenshot3.png",
+                      "images/Screenshot4.png",
+                      "images/Screenshot5.png",
+                      "images/Screenshot6.png",
+                      "images/Screenshot7.png",
+                      "images/Screenshot8.png",
+                    ].map((src, index) => (
+                      <div
+                        key={index}
+                        className="relative group overflow-hidden rounded-lg shadow-lg transform hover:scale-105 transition-all duration-500"
+                        style={{ animationDelay: `${index * 0.1}s` }}
+                      >
+                        <img
+                          src={src}
+                          alt={`Screenshot ${index + 1}`}
+                          className="w-full h-full object-cover transform transition-transform duration-700 ease-in-out group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-400 opacity-0 group-hover:opacity-30 transition-all duration-500"></div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </section>
