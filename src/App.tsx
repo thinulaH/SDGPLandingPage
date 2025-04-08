@@ -37,35 +37,35 @@ function App() {
     },
     {
       name: "Sithumi",
-      role: "Game Developer & Marketing Strategist",
+      role: "Game Developer",
       image: "images/Sithumi.jpeg",
       linkedin: "#",
       github: "https://github.com/Sithumi-SS"
     },
     {
       name: "Dulmina",
-      role: "Game Developer & Sound Designer",
+      role: "Game Developer",
       image: "images/Dulmina.jpg",
       linkedin: "https://www.linkedin.com/in/dulmina-hettiarachchi-8aa923296",
       github: "https://github.com/dulminahxxx"
     },
     {
       name: "Thrishali",
-      role: "Game Developer & UI/UX Designer",
+      role: "Game Developer",
       image: "images/Thrishali.jpg",
       linkedin: "www.linkedin.com/in/thrishali-gamage-11844a294",
       github: "https://github.com/ThrishaliN"
     },
     {
       name: "Thinula",
-      role: "Game Developer & Data Science Specialist",
+      role: "Game Developer",
       image: "/images/Thinula.png",
       linkedin: "https://www.linkedin.com/in/thinula-harischandra-218208272/",
       github: "https://github.com/thinulaH"
     },
     {
       name: "Afra",
-      role: "Game Developer & Social Media Manager",
+      role: "Game Developer",
       image: "images/Afra.jpg",
       linkedin: "https://www.linkedin.com/in/fathima-afra-87a2a3303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       github: "https://github.com/Afra10"
