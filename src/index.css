@@ -75,3 +75,23 @@ a, button, input, textarea {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.1);
 }
+
+a:hover, button:hover {
+  transform: scale(1.05);
+}
+
+/* Add smooth scaling for images */
+img {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.1);
+  z-index: 10; /* Bring the image to the front */
+}
+
+/* Ensure parent container allows scaling without cropping */
+.parent-container {
+  overflow: visible; /* Allow the image to scale freely */
+  position: relative; /* Ensure proper stacking context */
+}
